@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://kit.fontawesome.com/1698a1b0a9.js" crossorigin="anonymous"></script>
-    <title>More | Kakao Clone</title>
+    <title>Setting | Kakao Clone</title>
 </head>
 <body>
     <div class="status-bar">
@@ -23,44 +23,48 @@
     </div>
     <header class="header">
         <div class="header__header__column">
-            <h1 class="header__title">More</h1>
+            <a href="more.html">
+                <i class="fas fa-arrow-left fa-2x"></i>
+            </a>
+            
+            <h1 class="header__title">Settings</h1>
         </div>
         <div class="header__header__column">
             <span class="header__icon">
                 <i class="fas fa-search"></i>
             </span>
-            <span class="header__icon">
-                <i class="far fa-comment"></i>
-            </span>
-            <span class="header__icon">
-                <i class="fas fa-cog"></i>
-            </span>
         </div>
     </header>
-
-    <nav class="nav">
-        <ul class="nav__list">
-            <li class="nav__list-item">
-                <a href="friends.html" class="nav__list-link">
-                    <i class="far fa-user"></i>
-                </a>
-            </li>
-            <li class="nav__list-item">
-                <a href="index.html" class="nav__list-link">
-                    <i class="far fa-comment"></i>
-                </a>
-            </li>
-            <li class="nav__list-item">
-                <a href="find.html" class="nav__list-link">
-                    <i class="fas fa-search"></i>
-                </a>
-            </li>
-            <li class="nav__list-item">
-                <a href="more.html" class="nav__list-link">
-                    <i class="fas fa-ellipsis-h"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
+    <main class="settings__list">
+        <section class="settings__sections">
+            <ul class="settings__list">
+                <li class="settings__setting">
+                    <span class="settings__icon">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                    <span class="settings__title">
+                        Privacy
+                    </span>
+                </li>
+                <li class="settings__setting">
+                    <span class="settings__icon">
+                        <i class="far fa-bell"></i>
+                    </span>
+                    <span class="settings__title">
+                        Notifications
+                    </span>
+                </li>
+                <li class="settings__setting">
+                    <span class="settings__icon">
+                        <i class="far fa-user"></i>
+                    </span>
+                    <span class="settings__title">
+                        Friends
+                    </span>
+                </li>
+            </ul>
+        </section>
+    </main>
+   
 </body>
 </html>
