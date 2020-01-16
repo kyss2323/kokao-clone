@@ -25,11 +25,13 @@
 
 .friend .friend__avatar{
     margin-right: 15px;
+    
 }
 
 .friend__content .friend__name{
     display: block;
     margin-bottom: 5px;
+    
 }
 
 .friend__content .friend__status,
@@ -44,4 +46,13 @@
 .friend__content .friend__status,
 .friend .chat__timestamp{
     font-size: 12px;
+}
+
+.friend__add-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    padding: 10px 15px;
+    border-radius: 5px;
 }
