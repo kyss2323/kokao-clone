@@ -43,7 +43,23 @@
     position: absolute;
     right: 10px;
 }
-
+@keyframes float{
+    0%{
+        box-shadow: 0 30px 60px -12px rgba(50,50,93,.25), 
+            0 18px 36px -18px rgba(0,0,0,.3),
+            0 -12px 36px -8px rgba(0,0,0,.025);
+    }
+    50%{
+        box-shadow: 0 30px 60px -60px rgba(50,50,93,.25), 
+            0 18px 36px -18px rgba(0,0,0,.3),
+            0 -12px 36px -8px rgba(0,0,0,.025);
+    }
+    100%{
+        box-shadow: 0 30px 60px -12px rgba(50,50,93,.25), 
+            0 18px 36px -18px rgba(0,0,0,.3),
+            0 -12px 36px -8px rgba(0,0,0,.025);
+    }
+}
 .chat__write{
     margin: 0 auto;
     bottom: 0px;
@@ -61,7 +77,10 @@
     width: 80%;
     transform: translateY(-100px);
     border-radius: 40px;
-    box-shadow: 0 30px 60px -12px rgba(50,50,93,.25), 0 18px 36px -18px rgba(0,0,0,.3), 0 -12px 36px -8px rgba(0,0,0,.025);
+    box-shadow: 0 30px 60px -12px rgba(50,50,93,.25), 
+            0 18px 36px -18px rgba(0,0,0,.3),
+            0 -12px 36px -8px rgba(0,0,0,.025);
+    animation: float 3s linear infinite forwards;
 }
 .chat__icon{
     font-size: 18px;
@@ -92,7 +111,7 @@
     align-items: center;
     padding: 0px 20px;
     width: 100%;
-    
+    overflow: hidden;
 }
 
 .chat__messages .chat__timestamp{
@@ -135,7 +154,6 @@
     0 -12px 36px -8px rgba(0,0,0,0.025);    
     padding: 10px 20px;
     border-radius: 30px;
-    background-image: linear-gradient(to left,#006cff,#0072ff);
     color: white;
     font-weight: 600;
     font-size: 13px;
@@ -152,12 +170,37 @@
 .incoming-message .message__bubble{
     border-bottom-left-radius: 0px;
     background-image: linear-gradient(to left,#fe8c00,#f83600);
-    color: white;
-
-    
 }
 
 .sent-message .message__bubble{
     border-bottom-right-radius: 0px;
+    background-image: linear-gradient(to left,#006cff,#0072ff);
     
+}
+
+@keyframes incomingAnim{
+    from{
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    to{
+        opacity: 1;
+        transform:none;
+    }
+}
+.incoming-message{
+    animation: incomingAnim 0.5s ease-out forwards;
+}
+@keyframes sentAnim{
+    from{
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    to{
+        opacity: 1;
+        transform:none;
+    }
+}
+.sent-message{
+    animation: sentAnim 0.5s ease-out forwards;
 }
