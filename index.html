@@ -42,7 +42,7 @@
 
     <main class="chats">
         <ul class="chats__list">
-            <li class="chats__chat chat"></li>
+            <li class="chats chat">
                 <a href="chat.html">
                     <div class="chats__chat friend friend--lg">    
                         <div class="friend__column">
@@ -57,9 +57,37 @@
                             </div>
                         </div>
                         <div class="friend__column">
-                            <span class="chat__timestamp">
-                                March 8
-                            </span>
+                            <div class="column__sub-info">
+                                <span class="chat__timestamp">
+                                    March 8
+                                </span>
+                                <div class="friend__badge badge">8</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="chats chat">
+                <a href="chat.html">
+                    <div class="chats__chat friend friend--lg">    
+                        <div class="friend__column">
+                            <img class="m-avatar friend__avatar" src="img/avatar.jpg">
+                            <div class="friend__content">
+                                <span class="friend__name">
+                                    IU
+                                </span>
+                                <span class="friend__bottom-text">
+                                    Going home!
+                                </span>
+                            </div>
+                        </div>
+                        <div class="friend__column">
+                            <div class="column__sub-info">
+                                <span class="chat__timestamp">
+                                    March 8
+                                </span>
+                                <div class="friend__badge badge">4</div>
+                            </div>
                         </div>
                     </div>
                 </a>
@@ -70,12 +98,12 @@
         <ul class="nav__list">
             <li class="nav__list-item">
                 <a href="friends.html" class="nav__list-link">
-                    <i class="far fa-user"></i>
+                    <span><i class="far fa-user"></i></span>
                 </a>
             </li>
             <li class="nav__list-item">
                 <a href="index.html" class="nav__list-link">
-                    <div class="nav__badge">8</div>
+                    <div class="nav__badge badge">12</div>
                     <i class="fas fa-comment"></i>
                 </a>
             </li>

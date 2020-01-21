@@ -20,10 +20,7 @@
 .nav .nav__list-link{
     position: relative;
 }
-.nav .nav__badge{
-    position: absolute;
-    top: -7px;
-    right: -7px;
+.badge{
     font-size: 10px;
     color: white;
     background-color: #dc5d46;
@@ -33,9 +30,25 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    animation: badgeFloat 1s ease-in-out infinite;
+}
+.nav .nav__badge{
+    position: absolute;
+    top: -7px;
+    right: -7px;
+}
+@keyframes badgeFloat{
+    0%{
+        transform: none;
+    }
+    50%{
+        transform: translateY(-5px);
+    }
+    0%{
+        transform: none;
+    }
 
 }
-
 @keyframes showNavBar{
     from{
         transform: translateY(80px);
@@ -49,4 +62,17 @@
     transform: translateY(80px);
     animation: showNavBar 0.5s ease-out forwards;
     animation-delay: .5s;
+}
+
+.nav__list-item{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.nav__list-item i:hover{
+    font-size: 24px;
 }
